@@ -515,7 +515,7 @@ section .row span {
     height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url('/assets/hero-1.png');
+    background-image: url('../assets/hero-1.png');
     background-size: cover;
     background-position: relative; 
     font-weight: 400;
