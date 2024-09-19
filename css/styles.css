@@ -5,7 +5,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif
+    font-family: "Montserrat", sans-serif , "Poppins"
+    
 }
 
 html {
@@ -41,6 +42,7 @@ a:hover {
     margin-bottom: 4.5rem;
     font-size: 4rem;
     text-transform: uppercase
+    
 }
 
 @media(max-width: 37.5em) {
@@ -55,7 +57,7 @@ a:hover {
 
 .text-color-main {
     margin-left: 1rem;
-    color: #5b86e5;
+    color: #0f49c7;
     -webkit-text-fill-color: #5b86e5 
 }
 
@@ -192,7 +194,7 @@ screen and (-ms-high-contrast: none) {
 }
 
 .cta-btn--resume:hover {
-    color: #5b86e5;
+    color: #0742c2;
     text-decoration: none;
     box-shadow: none
 }
@@ -290,7 +292,7 @@ screen and (-ms-high-contrast: none) {
     transform: scale(1.1) translateY(-2px)
 }
 
-.social-links a:hover .fa-twitter {
+.social-links a:hover .fa-facebook {
     color: #00acee
 }
 
@@ -302,8 +304,12 @@ screen and (-ms-high-contrast: none) {
     color: #4875b4
 }
 
-.social-links a:hover .fa-codepen {
-    color: #212121
+.social-links a:hover .fa-gitlab {
+    color: #e97100
+}
+
+.social-links a:hover .fa-github {
+    color: #000000
 }
 
 .back-to-top i {
@@ -509,7 +515,9 @@ section .row span {
     height: 100vh;
     display: flex;
     align-items: center;
-    background: #2e2d2d;
+    background-image: url('/assets/hero-1.png');
+    background-size: cover;
+    background-position: relative; 
     font-weight: 400;
     color: #ffffff;
     padding: 0rem 5.6rem;
@@ -520,6 +528,23 @@ section .row span {
     z-index: -1;
     line-height: 1.2;
     animation: hidden 1000ms linear forwards
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Ensure the overlay is on top of the background */
+}
+
+.container {
+    position: relative; /* Position the container relatively to stack above the overlay */
+    z-index: 2; /* Ensure the container content is above the overlay */
+    text-align: center;
 }
 
 @media(max-width: 56.25em) {
@@ -602,7 +627,7 @@ section .row span {
 .scroll-down {
     height: 50px;
     width: 30px;
-    border: 2px solid #000;
+    border: 2px solid #ffffff;
     border-radius: 50px;
     cursor: pointer
 }
@@ -615,7 +640,7 @@ section .row span {
     position: absolute;
     top: 20%;
     left: 50%;
-    border: 2px solid #5b86e5;
+    border: 2px solid #ffffff;
     transform: translate(-50%, -100%) rotate(45deg);
     border-top: none;
     border-left: none;
@@ -938,8 +963,8 @@ nav a:hover::after {
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
